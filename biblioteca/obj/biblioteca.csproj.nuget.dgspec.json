@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\utilizador\\source\\repos\\biblioteca\\biblioteca\\biblioteca.csproj": {}
+    "C:\\Users\\utilizador\\Documents\\GitHub\\biblioteca\\biblioteca\\biblioteca.csproj": {}
   },
   "projects": {
-    "C:\\Users\\utilizador\\source\\repos\\biblioteca\\biblioteca\\biblioteca.csproj": {
+    "C:\\Users\\utilizador\\Documents\\GitHub\\biblioteca\\biblioteca\\biblioteca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\utilizador\\source\\repos\\biblioteca\\biblioteca\\biblioteca.csproj",
+        "projectUniqueName": "C:\\Users\\utilizador\\Documents\\GitHub\\biblioteca\\biblioteca\\biblioteca.csproj",
         "projectName": "biblioteca",
-        "projectPath": "C:\\Users\\utilizador\\source\\repos\\biblioteca\\biblioteca\\biblioteca.csproj",
+        "projectPath": "C:\\Users\\utilizador\\Documents\\GitHub\\biblioteca\\biblioteca\\biblioteca.csproj",
         "packagesPath": "C:\\Users\\utilizador\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\utilizador\\source\\repos\\biblioteca\\biblioteca\\obj\\",
+        "outputPath": "C:\\Users\\utilizador\\Documents\\GitHub\\biblioteca\\biblioteca\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
