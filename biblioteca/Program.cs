@@ -1,4 +1,11 @@
+using biblioteca.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllersWithViews();
+
+// 👇 ADICIONA ESTA LINHA
+builder.Services.AddSingleton<ExcelBookService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
