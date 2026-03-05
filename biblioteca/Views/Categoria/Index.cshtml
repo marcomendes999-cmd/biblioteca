@@ -1,0 +1,53 @@
+﻿@using biblioteca.Models
+@model List<Categoria>
+
+@{
+    ViewData["Title"] = "Lista de Livros";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<div class="card">
+    <div class="card-header d-flex align-items-center">
+        Listagem de Categorias
+        <a class="btn btn-primary btn-sm ms-auto" asp-area="" asp-controller="Categoria" asp-action="New">
+            <i class="bi bi-plus me-1"></i> Add Categoria
+        </a>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Nome </th>
+                    <th>Descrição</th>
+                    <th>Ativo</th>
+                    <th>Criado</th>
+                    <th>Actualizado</th>
+                    <th>#</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var categoria in Model)
+                {
+                    <tr>
+                        <td>@categoria.Nome</td>
+                        <td>@categoria.Descricao</td>
+                        <td>@categoria.ativo</td>
+                        <td>@categoria.createAt.ToString("dd/MM/yyyy")</td>
+                        <td>@categoria.updateAt.ToString("dd/MM/yyyy")</td>
+                        <td>
+                            <a class="btn btn-sm btn-warning" asp-controller="Categoria" asp-action="Edit" asp-route-id="@categoria.Id">
+                                <i class="bi bi-pencil-square me-1"></i> Edit
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
 
 namespace biblioteca.Models
 {
@@ -7,7 +8,10 @@ namespace biblioteca.Models
         public int Id { get; set; }
         public string Title { get; set; }
         public string Autor { get; set; }
-        public string Categoria { get; set; }
+        public int CategoriaId { get; set; }
+
+        [ValidateNever]
+        public Categoria Categoria { get; set; }
         public int Quantidade { get; set; }
         public DateTime CreateAt { get; set; }
         public DateTime UpdateAt { get; set; }
