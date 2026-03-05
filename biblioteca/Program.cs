@@ -4,8 +4,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-// 👇 ADICIONA ESTA LINHA
+
 builder.Services.AddSingleton<ExcelBookService>();
+
+builder.Services.AddSingleton<ExcelCategoriaService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
