@@ -18,6 +18,9 @@ namespace biblioteca.Controllers
 
         public IActionResult Index(int? categoria)
         {
+            Book novolivro = new Book();
+
+            
             var books = _excelService.GetBooks();
 
             var listacategoria = _categoriaService.GetCategorias();
@@ -28,15 +31,18 @@ namespace biblioteca.Controllers
             {
                 books = books.Where(h => h.CategoriaId == categoria).ToList();
             }
+
+
             return View(books);
         }
 
 
         public IActionResult New()
         {
-            var listacategoria = _categoriaService.GetCategorias();
+            var listaCategorias = _categoriaService.GetCategorias();
 
-            ViewBag.Categorias = listacategoria;
+            ViewBag.listaCategorias = listaCategorias.Where(j => j.ativo == 1).ToList();
+
             return View();
         }
 
@@ -60,6 +66,7 @@ namespace biblioteca.Controllers
             else
             {
                 var errors = ModelState.Values.SelectMany(v => v.Errors);
+                return RedirectToAction("New");
             }
 
            
@@ -70,7 +77,7 @@ namespace biblioteca.Controllers
         {
             var listacategoria = _categoriaService.GetCategorias();
 
-            ViewBag.Categorias = listacategoria;
+            ViewBag.Categorias = listacategoria.Where(j => j.ativo == 1);
 
             var book = _excelService.GetBooks().FirstOrDefault(b => b.Id == id);
             if (book == null)

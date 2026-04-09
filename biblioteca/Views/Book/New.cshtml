@@ -1,7 +1,8 @@
 ﻿@model biblioteca.Models.Book
 
 @{
-    List<Categoria> categorias = (List<Categoria>)ViewBag.Categorias;
+    var categorias = (List<Categoria>)ViewBag.listaCategorias;
+
 }
 
 <div class="container mt-4">
@@ -16,10 +17,10 @@
             <label class="form-label">Autor</label>
             <input asp-for="Autor" class="form-control" />
         </div>
-        @*         <div class="mb-3">
+@*                 <div class="mb-3">
             <label class="form-label">Categoria</label>
             <input asp-for="CategoriaId" class="form-control" />
-        </div> *@
+        </div>  *@
         <select class="form-select" asp-for="CategoriaId">
             <option selected>Selecione uma Categoria</option>
             @foreach (var cat in categorias)
